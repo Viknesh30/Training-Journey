@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Website</title>
+    <!-- Bootstrap 5 CSS CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.css" integrity="sha512-36F832l13IegJ8Meeg8hlzXU83GBt0Z8oEsh/6rDen/+c13KMnaCnvwEh+h6S3/xz99NTAwusodPl4OMYG5cQQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-3">
+        <h1><b>Responsive Website</b></h1>
+    </header>
+
+    <main class="container my-4">
+      <div class="row">
+          <article class="col-md-8 bg-white p-4">
+            <div class="image-container position-relative">
+              <img src="images/Liebe_as_child.webp" alt="Your Image" class="img-fluid">
+              <div class="icon-container position-absolute">
+                  <img src="images/computer.png" alt="Icon" class="icon-img">
+              </div>
+          </div>          
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lobortis erat. Maecenas egestas vestibulum
+                massa, eu fringilla purus eleifend a. Proin volutpat augue eu dolor interdum, in cursus urna sodales.
+                Etiam vel elit odio. Quisque bibendum purus id urna fringilla, vel cursus justo tempus. Fusce vel
+                ultrices est. Sed auctor hendrerit libero, vel tincidunt elit ultricies sit amet. Integer eu
+                sollicitudin mi. Integer volutpat scelerisque feugiat.
+            </p>
+
+        
+        </br>
+            <br>
+            
+            <section class="d-flex flex-wrap justify-content-between">
+              <div class="col-6 col-md-4 col-lg-3">
+                  <img src="images/download.png" alt="" class="img-fluid" id="image1">
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                  <img src="images/images.png" alt="Image 7" class="img-fluid">
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                  <img src="images/images (1).png" alt="" class="img-fluid">
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                  <img src="images/images (2).png" alt="Image 3" class="img-fluid">
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                  <img src="images/images (3).png" alt="Image 4" class="img-fluid">
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                  <img src="images/images (4).png" alt="Image 5" class="img-fluid">
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                  <img src="images/placas-y-numeros-number-7-100mm.jpg" alt="Image 8" class="img-fluid">
+              </div>
+              <div class="col-6 col-md-4 col-lg-3">
+                  <img src="images/images (5).png" alt="Image 6" class="img-fluid">
+              </div>
+          </section>
+
+            <div class="button-container">
+                <button class="button" onclick="hideImage()">Select</button>
+                <button class="button2" onclick="resetImages()">Reset</button>
+            </div>
+            <br>
+            <div class="table-responsive">
+            <table>
+                <tr>
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                </tr>
+                <tr>
+                  <td>Ernst Handel</td>
+                  <td>Roland Mendel</td>
+                  <td>Austria</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Giovanni Rovelli</td>
+                  <td>Italy</td>
+                </tr>
+              </table>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+              <button class="btn new-button" onclick="showCompletionAlert()">Done</button>
+          </div>
+        </article>
+    
+        
+    </main>
+    
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function hideImage() {
+            document.getElementById('image1').style.display = 'none';
+        }
+
+        function resetImages() {
+            // Set the display property of all images back to 'block'
+            var images = document.querySelectorAll('section img');
+            images.forEach(function(image) {
+                image.style.display = 'block';
+            });
+        }
+        function showCompletionAlert() {
+            alert('Task Completed!');
+        }
+
+    </script>
+</body>
+</html>
